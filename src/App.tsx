@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Nav/>
-      <Home/>
+      <Home categories={store.categories} blocks={store.blocks}/>
     </div>
   );
 }

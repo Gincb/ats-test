@@ -1,0 +1,51 @@
+@import '../../style/variables.scss';
+@import "../../style/mediaQueries.scss";
+
+.card {
+  width: 100%;
+  height: 30vh;
+  margin: 2em 0;
+  padding: 1em;
+  border-radius: 22px;
+  background-image: url('https://images.unsplash.com/photo-1567653418876-5bb0e566e1c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &_info{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    
+    >h2, h3 {
+      font-size: $size-body;
+      font-weight: $font-regular;
+    }
+  }
+
+  &_play {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 3.5em;
+    width: 3.5em;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 1.5em;
+    left: 1.5em;
+
+    >svg {
+      height: 3.5em;
+      width: 3.5em;
+      fill: rgb(255, 255, 255);
+    }
+  }
+
+  &_play:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+
+    >svg {
+      height: 3.5em;
+      width: 3.5em;
+      fill: rgb(207, 207, 207);
+    }
+  }
+}
