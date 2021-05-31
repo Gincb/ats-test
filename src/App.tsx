@@ -3,14 +3,10 @@ import Home from './components/Home/Home';
 import Nav from './components/Nav/Nav';
 import Store from './store'
 import { observer } from "mobx-react"
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function App() {
   const [store] = useState(() => new Store())
-
-  useEffect(() => {
-    store.fetchData()
-  }, [])
 
   return (
     <div className="App">

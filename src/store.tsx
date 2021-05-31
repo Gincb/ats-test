@@ -1,4 +1,4 @@
-import { action, computed, makeObservable, observable, autorun } from "mobx"
+import { action, computed, makeObservable, observable, autorun, runInAction } from "mobx"
 
 import axios from "axios"
 
@@ -11,9 +11,9 @@ class Store {
       blocks: observable,
       categories: observable,
       storeDetails: computed,
-      fetchData: action,
     })
     autorun(this.logStoreDetails)
+    runInAction(this.fetchData)
   }
 
   logStoreDetails = () => {
