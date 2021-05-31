@@ -1,8 +1,17 @@
 import './App.scss';
 import Home from './components/Home/Home';
 import Nav from './components/Nav/Nav';
+import Store from './store'
+import { observer } from "mobx-react"
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [store] = useState(() => new Store())
+
+  useEffect(() => {
+    store.fetchData()
+  }, [])
+
   return (
     <div className="App">
       <Nav/>
@@ -11,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default observer(App);
