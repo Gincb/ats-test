@@ -1,0 +1,51 @@
+@import '../../style/variables.scss';
+@import "../../style/mediaQueries.scss";
+
+.home {
+  margin-left: $nav-width;
+  padding: 1em;
+  height: 100vh;
+  overflow-y: scroll;
+
+  &_heading {
+    width: 100%;
+    font-size: $size-heading;
+    font-weight: $font-regular;
+  }
+
+  &_header {
+    &_list {
+      display: flex;
+      justify-content: flex-start;
+      padding: 0;
+      list-style: none;
+      width: 100%;
+
+      &_item, &_active-item {
+        cursor: pointer;
+        font-weight: $font-bold;
+      }
+
+      &_item {
+        margin-right: 1em;
+        padding: 0;
+        text-align: center;
+        font-size: $size-body;
+      }
+
+      &_active-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $active-color;
+
+        &_border {
+          margin-top: 0.3em;
+          width: 20px;
+          height: 3px;
+          background-color: $active-color;
+        }
+      }
+    }
+  }
+}
